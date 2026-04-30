@@ -57,8 +57,29 @@
     display: flex; align-items: center; gap: 10px;
   }
   .nav-logo-mark {
-    height: 48px; width: auto;
+    height: 44px;
+    width: auto;
     display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  .nav-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .nav-logo-text span:first-child {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--teal-dark);
+  }
+  .nav-logo-text span:last-child {
+    font-size: 0.68rem;
+    font-weight: 400;
+    color: var(--text-light);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
   /* SVG social icons */
   .social-icon-svg { width: 18px; height: 18px; display: inline-block; vertical-align: middle; }
@@ -656,7 +677,11 @@
 <!-- NAV -->
 <nav id="mainNav">
   <a href="#" class="nav-logo" onclick="showPage('home')">
-    <img src="./Logo_Color_Edited.png" alt="Elite Virtual Services" class="nav-logo-mark">
+    <img src="./Logo_Color_Edited.png" alt="Elite Virtual Services Logo" class="nav-logo-mark">
+    <div class="nav-logo-text">
+      <span>Elite Virtual Services</span>
+      <span>Making Life Simpler, Virtually</span>
+    </div>
   </a>
   <ul class="nav-links">
     <li><a href="#" onclick="showPage('home')">Home</a></li>
